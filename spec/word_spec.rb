@@ -1,11 +1,12 @@
-require('rspec')
-require('pry')
-require('man')
-require('word')
-require('used_letters')
+require('spec_helper')
 
 
 describe(Word) do
+
+  before() do
+    Word.clear()
+    @@dashes = []
+  end
 
   describe('.all') do
     it("is empty at first") do
@@ -52,5 +53,17 @@ describe(Word) do
       expect(testword.dash()).to(eq(["-", "-", "-", "-", "-"]))
     end
   end
+
+  describe('#check_word') do
+    it("outputs each letter that matches used_letter") do
+      letter = UsedLetter.new("h")
+      letter.save()
+      checkword = Word.new(["h", "e", "l", "l", "o"])
+      checkword.save()
+      checkword.dash()
+      expect((checkword).check_word(letter)).to(eq(["h", "-", "-", "-", "-"]))
+    end
+  end
+
 
 end

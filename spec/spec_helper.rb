@@ -1,0 +1,5 @@
+require('rspec')
+require('pry')
+require('man')
+require('word')
+require('used_letters')
