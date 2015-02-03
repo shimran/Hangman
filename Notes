@@ -1,0 +1,23 @@
+Word
+1. Accepts a word to check [X]
+2. Contains some letters but not others => See UsedLetters
+3. Split the array [X]
+4. Upcase/Downcase user input [X]
+5. Uses validation to exclude blanks, grammatical marks [X]
+
+Man
+2. Checks the stored word against UsedLetters - does hits or misses
+3. Has a limited number of misses (10?)
+4. Does # of unique letters in word + allowed number of misses
+5. Draws a hangman if there is a miss
+
+UsedLetters
+1. Accepts a letter - but only one letter at a time!
+2. Index each letter and compare against letter user gives to check?,
+Puts a letter in it's place if it is a part of the word
+3. Prints it below if it isn't
+4. Doesn't allow the letter to be used twice
+
+Game
+1. Accepts and stores a word
+2. Tells you if you win or lose
